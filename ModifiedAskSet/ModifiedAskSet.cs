@@ -10,7 +10,7 @@ namespace ModifiedAskSet
     //[NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
     internal class ModifiedAskSet : BaseUnityPlugin
     {
-        public const string PluginGUID = "com.jotunn.ModifiedAskSet";
+        public const string PluginGUID = "com.jumb0frame.ModifiedAskSet";
         public const string PluginName = "ModifiedAskSet";
         public const string PluginVersion = "0.0.1";
         
