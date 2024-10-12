@@ -1,14 +1,16 @@
-﻿# JotunnModStub
-Upon building for release, this README.md is copied into the `Package` folder for thunderstore packaging. Remember to also edit the manifest.json and supply your own mod icon.
+﻿# Modified Ask Set
+
+A quick and ugly modification to the Vanilla Ask Set effects for Valheim
 
 ## Installation (manual)
+
+Grab the ModifiedAskSet.dll file and place it in the Bepinex plugins folder
 
 
 ## Features
 
-
-## Changelog
-
+Treat yourself to a overpowered Ask Set
 
 ## Known issues
-You can find the github at:
+If you encounter any issues, you can find the github at: https://github.com/Jumb0Frame/ModifiedAskSet
+No guarantees on any fixes.

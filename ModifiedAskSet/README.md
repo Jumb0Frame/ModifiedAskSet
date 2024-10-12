@@ -9,7 +9,7 @@ Grab the ModifiedAskSet.dll file and place it in the Bepinex plugins folder
 
 ## Features
 
-Treat yourself to a overpowered Ask Set
+Treat yourself to an overpowered Ask Set
 
 ## Known issues
 If you encounter any issues, you can find the github at: https://github.com/Jumb0Frame/ModifiedAskSet
