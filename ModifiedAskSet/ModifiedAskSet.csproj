@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\JotunnLib.2.20.3\build\JotunnLib.props" Condition="Exists('..\packages\JotunnLib.2.20.3\build\JotunnLib.props')" />
   <PropertyGroup>
@@ -7,8 +7,8 @@
     <ProjectGuid>{DEAF4438-8089-40ED-8175-398E1261D45B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JotunnModStub</RootNamespace>
-    <AssemblyName>JotunnModStub</AssemblyName>
+    <RootNamespace>ModifiedAskSet</RootNamespace>
+    <AssemblyName>ModifiedAskSet</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -59,7 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
-    <Compile Include="JotunnModStub.cs" />
+    <Compile Include="ModifiedAskSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,7 +78,7 @@
   </ItemGroup>
   <PropertyGroup>
     <VALHEIM_MANAGED>$(VALHEIM_INSTALL)/valheim_Data/Managed</VALHEIM_MANAGED>
-    <UNITY_FOLDER>$(SolutionDir)JotunnModUnity</UNITY_FOLDER>
+    <UNITY_FOLDER>$(SolutionDir)ModifiedAskSetUnity</UNITY_FOLDER>
   </PropertyGroup>
   <Target Name="CopyToUnity">
     <Message Text="Copy To Unity" Importance="high" />
@@ -124,3 +124,4 @@
     <Error Condition="!Exists('..\packages\JotunnLib.2.20.3\build\JotunnLib.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\JotunnLib.2.20.3\build\JotunnLib.props'))" />
   </Target>
 </Project>
+
