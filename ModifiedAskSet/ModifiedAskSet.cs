@@ -22,19 +22,33 @@ namespace ModifiedAskSet
         // https://valheim-modding.github.io/Jotunn/tutorials/localization.html
         public static CustomLocalization Localization = LocalizationManager.Instance.GetLocalization();
 
-        private static SE_Stats SetEffects;
+        //set status effects config
+        private static StatusEffectsConfig setStatusEffects;
+        //equip status effects config
+        private static StatusEffectsConfig hoodEquipEffects;
+        private static StatusEffectsConfig chestEquipEffects;
+        private static StatusEffectsConfig legsEquipEffects;
+        //armor config
+        private static ArmorConfig hoodArmorConfig;
+        private static ArmorConfig chestArmorConfig;
+        private static ArmorConfig legsArmorConfig;
+        //craft config
+        private static RecipeConfig hoodRecipeConfig;
+        private static RecipeConfig chestRecipeConfig;
+        private static RecipeConfig legsRecipeConfig;
+
 
         private void Awake()
         {
             // Jotunn comes with its own Logger class to provide a consistent Log style for all mods using it
             Jotunn.Logger.LogInfo("ModifiedAskSet has landed");
 
-            SetStatusEffects();
-
             try
             {
+                //todo
                 PrefabManager.OnVanillaPrefabsAvailable += AddModifiedAsksvinArmor;
-                Jotunn.Logger.LogInfo(SetEffects.GetTooltipString());
+                
+
 
             }
             catch (Exception e)
@@ -44,6 +58,9 @@ namespace ModifiedAskSet
         }
         private void AddModifiedAsksvinArmor()
         {
+            //todo
+
+            
             //hood
             ItemConfig askHoodConfig = new ItemConfig();
             askHoodConfig.Name = "Better Ask Hood Config";
@@ -107,10 +124,13 @@ namespace ModifiedAskSet
             askLegsDrop.m_itemData.m_shared.m_setStatusEffect = (StatusEffect)(object)SetEffects;
 
             PrefabManager.OnVanillaPrefabsAvailable -= AddModifiedAsksvinArmor;
+            
         }
 
         private void SetStatusEffects()
         {
+            //todo
+
             try
             {
                 SetEffects = ScriptableObject.CreateInstance<SE_Stats>();
