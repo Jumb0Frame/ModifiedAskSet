@@ -43,7 +43,6 @@ namespace ModifiedAskSet
             movementModifier = _movementMod;
             armor = _armor;
             armorPerLvl = _armorPerLvl;
-            baseDurability = _baseDura;
             maxDurability = _maxDura;
             durabilityPerLvl = _duraPerLvl;
             equipTime = _equipTime;
