@@ -58,6 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArmorConfig.cs" />
+    <Compile Include="RecipeConfig.cs" />
     <Compile Include="Properties\IgnoreAccessModifiers.cs" />
     <Compile Include="ModifiedAskSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

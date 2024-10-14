@@ -6,6 +6,8 @@ using Jotunn.Managers;
 using Jotunn.Utils;
 using UnityEngine;
 
+//TODO convert over to a more generic config structure
+
 namespace ModifiedAskSet
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
