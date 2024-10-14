@@ -3,7 +3,6 @@ using BepInEx;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
-using Jotunn.Utils;
 using UnityEngine;
 
 //TODO convert over to a more generic config structure
