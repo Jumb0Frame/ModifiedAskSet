@@ -14,10 +14,10 @@ namespace ModifiedAskSet
         private string craftStation;
         private string repairStation;
         private int stationLvl;
-        private RequirementConfig requirementConfig1;
-        private RequirementConfig requirementConfig2;
-        private RequirementConfig requirementConfig3;
-        private RequirementConfig requirementConfig4;
+        private RequirementConfig requirementConfig1 = null;
+        private RequirementConfig requirementConfig2 = null;
+        private RequirementConfig requirementConfig3 = null;
+        private RequirementConfig requirementConfig4 = null;
 
         public RecipeConfig(string _name, string _desc, string _craft, string _repair, int _stationLvl, RequirementConfig _req1)
         {
@@ -28,9 +28,6 @@ namespace ModifiedAskSet
             stationLvl = _stationLvl;
 
             requirementConfig1 = _req1;
-            requirementConfig2 = null;
-            requirementConfig3 = null;
-            requirementConfig4 = null;
         }
 
         public RecipeConfig(string _name, string _desc, string _craft, string _repair, int _stationLvl, RequirementConfig _req1, RequirementConfig _req2)
@@ -43,8 +40,6 @@ namespace ModifiedAskSet
 
             requirementConfig1 = _req1;
             requirementConfig2 = _req2;
-            requirementConfig3 = null;
-            requirementConfig4 = null;
         }
 
         public RecipeConfig(string _name, string _desc, string _craft, string _repair, int _stationLvl, RequirementConfig _req1, RequirementConfig _req2, RequirementConfig _req3)
@@ -58,7 +53,6 @@ namespace ModifiedAskSet
             requirementConfig1 = _req1;
             requirementConfig2 = _req2;
             requirementConfig3 = _req3;
-            requirementConfig4 = null;
         }
 
         public RecipeConfig(string _name, string _desc, string _craft, string _repair, int _stationLvl, RequirementConfig _req1, RequirementConfig _req2, RequirementConfig _req3, RequirementConfig _req4) 
