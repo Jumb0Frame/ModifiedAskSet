@@ -65,8 +65,8 @@ namespace ModifiedAskSet
             //todo : equip effects for each piece if any, recipe config for each, armor config for each
 
             //hood
-            hoodRecipeConfig = new RecipeConfig("Better Ask Hood Config", "Better Ask Hood description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
-                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            hoodRecipeConfig = new RecipeConfig("Better Ask Hood Config", "Better Ask Hood description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2, 1),
+                                                new RequirementConfig("LinenThread", 15, 10), new RequirementConfig("AskHide", 10, 5), new RequirementConfig("LoxPelt", 4, 2));
             hoodArmorConfig = new ArmorConfig("Better Ask Hood", "Better Ask Hood description", 4, 1f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
             CustomItem askHood = new CustomItem("ModifiedAskHood", "HelmetAshlandsMediumHood", hoodRecipeConfig.GetRecipeConfig());
             ItemManager.Instance.AddItem(askHood);
@@ -95,8 +95,8 @@ namespace ModifiedAskSet
 
 
             //chest
-            chestRecipeConfig = new RecipeConfig("Better Ask Chest Config", "Better Ask Chest description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
-                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            chestRecipeConfig = new RecipeConfig("Better Ask Chest Config", "Better Ask Chest description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2, 1),
+                                                new RequirementConfig("LinenThread", 15, 10), new RequirementConfig("AskHide", 10, 5), new RequirementConfig("LoxPelt", 4, 2));
             chestArmorConfig = new ArmorConfig("Better Ask Chest", "Better Ask Chest description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
             CustomItem askChest = new CustomItem("ModifiedAskChest", "ArmorAshlandsMediumChest", chestRecipeConfig.GetRecipeConfig());
             ItemManager.Instance.AddItem(askChest);
@@ -124,8 +124,8 @@ namespace ModifiedAskSet
             */
 
             //legs
-            legsRecipeConfig = new RecipeConfig("Better Ask Legs Config", "Better Ask Legs description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
-                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            legsRecipeConfig = new RecipeConfig("Better Ask Legs Config", "Better Ask Legs description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2, 1),
+                                                new RequirementConfig("LinenThread", 15, 10), new RequirementConfig("AskHide", 10, 5), new RequirementConfig("LoxPelt", 4, 2));
             legsArmorConfig = new ArmorConfig("Better Ask Legs", "Better Ask Legs description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
             CustomItem askLegs = new CustomItem("ModifiedAskLegs", "ArmorAshlandsMediumlegs", legsRecipeConfig.GetRecipeConfig());
             ItemManager.Instance.AddItem(askLegs);
