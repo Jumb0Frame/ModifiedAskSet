@@ -4,6 +4,7 @@ using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
 using UnityEngine;
+using static Player;
 
 //TODO convert over to a more generic config structure
 
@@ -16,7 +17,7 @@ namespace ModifiedAskSet
     {
         public const string PluginGUID = "com.jumb0frame.ModifiedAskSet";
         public const string PluginName = "ModifiedAskSet";
-        public const string PluginVersion = "0.0.1";
+        public const string PluginVersion = "1.0.0";
         
         // Use this class to add your own localization to the game
         // https://valheim-modding.github.io/Jotunn/tutorials/localization.html
@@ -45,11 +46,13 @@ namespace ModifiedAskSet
 
             try
             {
-                //todo
-                PrefabManager.OnVanillaPrefabsAvailable += AddModifiedAsksvinArmor;
+                //set effects config
+                setStatusEffects = new StatusEffectsConfig("Modified Ask Effect", "Better Ask's Endurance", "Better Ask's tooltip");
+                setStatusEffects.SEAttackConfig(0f, 0.15f, 0.15f, 0f, 0f, 0f, 0f, 0f, 0f, 0f);
+                setStatusEffects.SEStaminaConfig(0f, 0f, 0f, -0.1f, -0.1f, -0.2f, 0f, 0f, 0f, 0f, 0f, 0f);
                 
-
-
+                //get the armor going
+                PrefabManager.OnVanillaPrefabsAvailable += AddModifiedAsksvinArmor;
             }
             catch (Exception e)
             {
@@ -58,10 +61,20 @@ namespace ModifiedAskSet
         }
         private void AddModifiedAsksvinArmor()
         {
-            //todo
+            //get set effects
+            SE_Stats setEffects = setStatusEffects.getSetEffects();
 
-            
+            //todo : equip effects for each piece if any, recipe config for each, armor config for each
+
             //hood
+            hoodRecipeConfig = new RecipeConfig("Better Ask Hood Config", "Better Ask Hood description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
+                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            hoodArmorConfig = new ArmorConfig("Better Ask Hood", "Better Ask Hood description", 4, 1f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
+            CustomItem askHood = new CustomItem("ModifiedAskHood", "HelmetAshlandsMediumHood", hoodRecipeConfig.GetRecipeConfig());
+            ItemManager.Instance.AddItem(askHood);
+            hoodArmorConfig.ApplyConfig(askHood.ItemDrop);
+
+            /*
             ItemConfig askHoodConfig = new ItemConfig();
             askHoodConfig.Name = "Better Ask Hood Config";
             askHoodConfig.Description = "Better Ask Hood description config";
@@ -80,10 +93,18 @@ namespace ModifiedAskSet
             askHoodDrop.m_itemData.m_shared.m_setName = "Modified Ask Set";
             askHoodDrop.m_itemData.m_shared.m_setSize = 3;
             askHoodDrop.m_itemData.m_shared.m_setStatusEffect = (StatusEffect)(object)SetEffects;
-
+            */
 
 
             //chest
+            chestRecipeConfig = new RecipeConfig("Better Ask Chest Config", "Better Ask Chest description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
+                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            chestArmorConfig = new ArmorConfig("Better Ask Hood", "Better Ask Hood description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
+            CustomItem askChest = new CustomItem("ModifiedAskChest", "ArmorAshlandsMediumChest", chestRecipeConfig.GetRecipeConfig());
+            ItemManager.Instance.AddItem(askChest);
+            chestArmorConfig.ApplyConfig(askChest.ItemDrop);
+
+            /*
             ItemConfig askChestConfig = new ItemConfig();
             askChestConfig.Name = "Better Ask Chest Config";
             askChestConfig.Description = "Better Ask Chest description config";
@@ -102,8 +123,17 @@ namespace ModifiedAskSet
             askChestDrop.m_itemData.m_shared.m_setName = "Modified Ask Set";
             askChestDrop.m_itemData.m_shared.m_setSize = 3;
             askChestDrop.m_itemData.m_shared.m_setStatusEffect = (StatusEffect)(object)SetEffects;
+            */
 
             //legs
+            legsRecipeConfig = new RecipeConfig("Better Ask Legs Config", "Better Ask Legs description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
+                                                new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
+            legsArmorConfig = new ArmorConfig("Better Ask Legs", "Better Ask Legs description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
+            CustomItem askLegs = new CustomItem("ModifiedAskLegs", "ArmorAshlandsMediumlegs", legsRecipeConfig.GetRecipeConfig());
+            ItemManager.Instance.AddItem(askLegs);
+            legsArmorConfig.ApplyConfig(askLegs.ItemDrop);
+
+            /*
             ItemConfig askLegsConfig = new ItemConfig();
             askLegsConfig.Name = "Better Ask Legs Config";
             askLegsConfig.Description = "Better Ask Legs description config";
@@ -122,11 +152,13 @@ namespace ModifiedAskSet
             askLegsDrop.m_itemData.m_shared.m_setName = "Modified Ask Set";
             askLegsDrop.m_itemData.m_shared.m_setSize = 3;
             askLegsDrop.m_itemData.m_shared.m_setStatusEffect = (StatusEffect)(object)SetEffects;
+            */
 
             PrefabManager.OnVanillaPrefabsAvailable -= AddModifiedAsksvinArmor;
             
         }
 
+        /*
         private void SetStatusEffects()
         {
             //todo
@@ -149,6 +181,7 @@ namespace ModifiedAskSet
             }
 
         }
+        */
     }
 }
 
