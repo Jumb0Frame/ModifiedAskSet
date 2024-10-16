@@ -3,8 +3,6 @@ using BepInEx;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
-using UnityEngine;
-using static Player;
 
 //TODO convert over to a more generic config structure
 
@@ -99,7 +97,7 @@ namespace ModifiedAskSet
             //chest
             chestRecipeConfig = new RecipeConfig("Better Ask Chest Config", "Better Ask Chest description config", "blackforge", "blackforge", 3, new RequirementConfig("MoltenCore", 2),
                                                 new RequirementConfig("LinenThread", 15), new RequirementConfig("AskHide", 10), new RequirementConfig("LoxPelt", 4));
-            chestArmorConfig = new ArmorConfig("Better Ask Hood", "Better Ask Hood description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
+            chestArmorConfig = new ArmorConfig("Better Ask Chest", "Better Ask Chest description", 4, 5f, null, "Modified Ask Set", 3, setEffects, 0f, 28f, 2f, 1000f, 200f, 0f);
             CustomItem askChest = new CustomItem("ModifiedAskChest", "ArmorAshlandsMediumChest", chestRecipeConfig.GetRecipeConfig());
             ItemManager.Instance.AddItem(askChest);
             chestArmorConfig.ApplyConfig(askChest.ItemDrop);
