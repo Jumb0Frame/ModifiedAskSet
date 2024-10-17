@@ -1,5 +1,6 @@
 using System;
 using BepInEx;
+using Jotunn.Utils;
 using Jotunn.Configs;
 using Jotunn.Entities;
 using Jotunn.Managers;
@@ -10,7 +11,7 @@ namespace ModifiedAskSet
 {
     [BepInPlugin(PluginGUID, PluginName, PluginVersion)]
     [BepInDependency(Jotunn.Main.ModGuid)]
-    //[NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
+    [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.Minor)]
     internal class ModifiedAskSet : BaseUnityPlugin
     {
         public const string PluginGUID = "com.jumb0frame.ModifiedAskSet";
