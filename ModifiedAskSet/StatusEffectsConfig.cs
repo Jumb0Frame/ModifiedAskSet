@@ -52,18 +52,16 @@ namespace ModifiedAskSet
         public void SEAttackConfig(float _bluntModifier = 0f, float _slashModifier = 0f, float _pierceModifier = 0f, float _chopModifier = 0f, float _pickaxeModifier = 0f,
                                     float _fireModifier = 0f, float _frostModifier = 0f, float _lightningModifier = 0f, float _poisonModifier = 0f, float _spiritModifier = 0f)
         {
-            HitData.DamageTypes modifier = new HitData.DamageTypes();
-            if (_bluntModifier != 0f) { modifier.m_blunt = _bluntModifier; }
-            if (_slashModifier != 0f) { modifier.m_slash = _slashModifier; }
-            if (_pierceModifier != 0f) { modifier.m_pierce = _pierceModifier; }
-            if (_chopModifier != 0f) { modifier.m_chop = _chopModifier; }
-            if (_pickaxeModifier != 0f) { modifier.m_pickaxe = _pickaxeModifier; }
-            if (_fireModifier != 0f) { modifier.m_fire = _fireModifier; }
-            if (_frostModifier != 0f) { modifier.m_frost = _frostModifier; }
-            if (_lightningModifier != 0f) { modifier.m_lightning = _lightningModifier; }
-            if (_poisonModifier != 0f) { modifier.m_poison = _poisonModifier; }
-            if (_spiritModifier != 0f) {modifier.m_spirit = _spiritModifier; }
-            percentDamageModifier.Modify(modifier);
+            if (_bluntModifier != 0f) { percentDamageModifier.m_blunt = _bluntModifier; }
+            if (_slashModifier != 0f) { percentDamageModifier.m_slash = _slashModifier; }
+            if (_pierceModifier != 0f) { percentDamageModifier.m_pierce = _pierceModifier; }
+            if (_chopModifier != 0f) { percentDamageModifier.m_chop = _chopModifier; }
+            if (_pickaxeModifier != 0f) { percentDamageModifier.m_pickaxe = _pickaxeModifier; }
+            if (_fireModifier != 0f) { percentDamageModifier.m_fire = _fireModifier; }
+            if (_frostModifier != 0f) { percentDamageModifier.m_frost = _frostModifier; }
+            if (_lightningModifier != 0f) { percentDamageModifier.m_lightning = _lightningModifier; }
+            if (_poisonModifier != 0f) { percentDamageModifier.m_poison = _poisonModifier; }
+            if (_spiritModifier != 0f) { percentDamageModifier.m_spirit = _spiritModifier; }
         }
 
         //Add stamina based modifiers
