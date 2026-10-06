@@ -373,3 +373,5 @@ Environment.props
 
 # not the generated dll for thunderstore
 */Package/plugins/*
+/ModifiedAskSet/Package/ModifiedAskSet.zip
+/ModifiedAskSet/Package/CHANGELOG.md
